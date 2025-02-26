@@ -93,8 +93,8 @@ SMODS.Joker{
         name = '9+10',
         text = {
             'Gains {X:mult,C:white}X0.5{} Mult per hand played if',
-            ' the sum of all ranks (scored and unscored)',
-            'is {C:attention}EXACTLY{} 21. Mult is {C:red}reset{}',
+            ' the sum of all ranks played (scored and unscored)',
+            'are {C:attention}EXACTLY{} 21. Mult is {C:red}reset{}',
             'if ranks are {C:attention}over{} 21',
             '{C:inactive}(Currently: {}{X:mult,C:white}X#1#{}{C:inactive}){}',
         },
@@ -201,7 +201,7 @@ SMODS.Joker {
 		text = {
 			"{C:attention}Jacks{} of {C:blue}Clubs{} or {C:spades}Spades{}",
 			"are considered a {C:Spades}Blackjack{} hand, and ",
-			"give {C:chips}21{} total Chips when scored"
+			"give +{C:chips}21{} total Chips when scored"
 		}
 	},
 	config = { extra = { chips = 11} },
@@ -233,8 +233,8 @@ SMODS.Joker{
         name = 'Red Joker',
         text = {
             'This Joker gains {C:mult}+2.1{} Mult',
-            'if the sum of all ranks',
-            'scored are {C:attention}21{} or under',
+            'if the sum of all ranks played',
+            '(scored and unscored) are {C:attention}21{} or under',
             '{C:inactive}(Currently{} {C:mult}+#1#{} {C:inactive}){}',
         },
     },
@@ -305,7 +305,7 @@ SMODS.Joker {
 		text = {
 			"{C:attention}Jacks{} of {C:hearts}Hearts{} or {C:diamonds}Diamonds{}",
 			"are considered a {C:Spades}Blackjack{} hand, and ",
-			"give {C:mult}21{} total Mult when scored"
+			"give +{C:mult}21{} Mult when scored"
 		}
 	},
 	config = { extra = { mult = 21} },
