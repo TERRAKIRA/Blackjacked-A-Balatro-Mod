@@ -61,7 +61,7 @@ SMODS.Joker{
                     if temp_ID <= 10 and temp_ID >= 2 then
                         ID_totals = ID_totals + temp_ID
 					elseif temp_ID == 11 then
-						if find_joker('Black Knight') or find_joker ('Red Knight') then
+						if next(SMODS.find_card('j_blckjkd_blackknight')) or next(SMODS.find_card('j_blckjkd_redknight')) then
 							ID_totals = ID_totals + 21
 						else
 							ID_totals = ID_totals + 10
@@ -270,9 +270,9 @@ SMODS.Joker{
                     if temp_ID <= 10 and temp_ID >= 2 then
                         ID_totals = ID_totals + temp_ID
 					elseif temp_ID == 11 then
-						if ( G.play.cards[i]:is_suit('Clubs') or G.play.cards[i]:is_suit('Spades') ) and find_joker('Black Knight') then
+						if ( G.play.cards[i]:is_suit('Clubs') or G.play.cards[i]:is_suit('Spades') ) and next(SMODS.find_card('j_blckjkd_blackknight')) then
 							ID_totals = ID_totals + 21
-						elseif ( G.play.cards[i]:is_suit('Hearts') or G.play.cards[i]:is_suit('Diamonds') ) and find_joker('Red Knight') then
+						elseif ( G.play.cards[i]:is_suit('Hearts') or G.play.cards[i]:is_suit('Diamonds') ) and next(SMODS.find_card('j_blckjkd_redknight')) then
 							ID_totals = ID_totals + 21
 						else
 							ID_totals = ID_totals + 10
