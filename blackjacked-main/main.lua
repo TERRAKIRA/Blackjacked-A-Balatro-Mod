@@ -72,7 +72,7 @@ SMODS.Joker{
                 end
             end
 			
-			if ID_totals <= 21 and ID_totals ~= 0 and context.before then
+			if ID_totals <= 21 and ID_totals > 0 and context.before then
                 card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
                 return {
                     message = 'Upgraded!',
@@ -283,7 +283,7 @@ SMODS.Joker{
                 end
             end
 			
-			if ID_totals <= 21 and ID_totals ~= 0 and context.before then
+			if ID_totals <= 21 and ID_totals > 0 and context.before then
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
                 return {
                     message = 'Upgraded!',
