@@ -25,7 +25,7 @@ SMODS.Joker{
         text = {
             'This Joker gains {C:blue}+21{} Chips',
             'if the sum of all ranks held',
-            'in hand are 21 or under',
+            'in hand are {C:attention}21{} or under',
             '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
         },
     },
@@ -233,8 +233,8 @@ SMODS.Joker{
         name = 'Red Joker',
         text = {
             'This Joker gains {C:mult}+2.1{} Mult',
-            'if the sum of all ranks played',
-            '(scored and unscored) are {C:attention}21{} or under',
+            'if the sum of all ranks {C:attention}scored{}',
+            'are {C:attention}21{} or under',
             '{C:inactive}(Currently{} {C:mult}+#1#{} {C:inactive}){}',
         },
     },
