@@ -24,8 +24,8 @@ SMODS.Joker{
         name = 'Black Joker',
         text = {
             'This Joker gains {C:blue}+21{} Chips',
-            'if the sum of all ranks held',
-            'in hand are {C:attention}21{} or under',
+            'if the sum of all ranks {C:attention}held{}',
+            '{C:attention}in hand{} are {C:attention}21{} or under',
             '{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)',
         },
     },
@@ -66,13 +66,15 @@ SMODS.Joker{
 						else
 							ID_totals = ID_totals + 10
 						end
+					elseif temp_ID >11 and temp_ID < 14 then
+						ID_totals = ID_totals + 10
                     elseif temp_ID == 14 then
                         ID_totals = ID_totals + 1
                     end
                 end
             end
 			
-			if ID_totals <= 21 and ID_totals > 0 and context.before then
+			if (ID_totals <= 21 and ID_totals > 0) and context.before then
                 card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
                 return {
                     message = 'Upgraded!',
@@ -201,7 +203,7 @@ SMODS.Joker {
 		text = {
 			"{C:attention}Jacks{} of {C:blue}Clubs{} or {C:spades}Spades{}",
 			"are considered a {C:Spades}Blackjack{} hand, and ",
-			"give +{C:chips}21{} total Chips when scored"
+			"give {C:chips}21{} total Chips when scored"
 		}
 	},
 	config = { extra = { chips = 11} },
@@ -233,8 +235,8 @@ SMODS.Joker{
         name = 'Red Joker',
         text = {
             'This Joker gains {C:mult}+2.1{} Mult',
-            'if the sum of all ranks {C:attention}scored{}',
-            'are {C:attention}21{} or under',
+            'if the sum of all ranks',
+            '{C:attention}scored and unscored{} are {C:attention}21{} or under',
             '{C:inactive}(Currently{} {C:mult}+#1#{} {C:inactive}){}',
         },
     },
@@ -277,13 +279,15 @@ SMODS.Joker{
 						else
 							ID_totals = ID_totals + 10
 						end
+					elseif temp_ID >11 and temp_ID < 14 then
+						ID_totals = ID_totals + 10
                     elseif temp_ID == 14 then
                         ID_totals = ID_totals + 1
                     end
                 end
             end
 			
-			if ID_totals <= 21 and ID_totals > 0 and context.before then
+			if ID_totals <= 21 and context.before then
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
                 return {
                     message = 'Upgraded!',
@@ -305,7 +309,7 @@ SMODS.Joker {
 		text = {
 			"{C:attention}Jacks{} of {C:hearts}Hearts{} or {C:diamonds}Diamonds{}",
 			"are considered a {C:Spades}Blackjack{} hand, and ",
-			"give +{C:mult}21{} Mult when scored"
+			"give {C:mult}21{} total Mult when scored"
 		}
 	},
 	config = { extra = { mult = 21} },
